@@ -26,7 +26,7 @@ export default function Home() {
   };
   
   const updateCalc = (value) => {
-    if (value === "C") {
+    if (value === "DEL") {
       clearInput();
     } else if (value === "=") {
       calculateResult();
@@ -45,30 +45,29 @@ export default function Home() {
 
       <div >
         
-        <button  onClick={() => updateCalc("1")}>*</button>
-        <button  onClick={() => updateCalc("2")}>2</button>
-        <button  onClick={() => updateCalc("9")}>3</button>
         <button  onClick={() => updateCalc("/")}>/</button>
-      </div>
-      <div >
-        <button  onClick={() => updateCalc("4")}>4</button>
-        <button  onClick={() => updateCalc("5")}>5</button>
-        <button  onClick={() => updateCalc("6")}>6</button>
         <button  onClick={() => updateCalc("*")}>*</button>
+        <button  onClick={() => updateCalc("-")}>-</button>
+        <button  onClick={() => updateCalc("+")}>+</button>
+        <button  onClick={() => updateCalc("=")}>=</button>
+      
       </div>
       <div >
         <button  onClick={() => updateCalc("1")}>1</button>
         <button  onClick={() => updateCalc("2")}>2</button>
         <button  onClick={() => updateCalc("3")}>3</button>
-        <button  onClick={() => updateCalc("-")}>-</button>
+        <button  onClick={() => updateCalc("4")}>4</button>
+        <button  onClick={() => updateCalc("5")}>5</button>
       </div>
       <div >
+        <button  onClick={() => updateCalc("6")}>5</button>
+        <button  onClick={() => updateCalc("7")}>7</button>
+        <button  onClick={() => updateCalc("8")}>8</button>
+        <button  onClick={() => updateCalc("9")}>9</button>
         <button  onClick={() => updateCalc("0")}>0</button>
-        <button  onClick={() => updateCalc(".")}>.</button>
-        <button  onClick={() => updateCalc("=")}>=</button>
-        <button  onClick={() => updateCalc("+")}>+</button>
+        <button  onClick={() => updateCalc("DEL")}>DEL</button>
       </div>
-      
+    
       </div>
     
     </>
