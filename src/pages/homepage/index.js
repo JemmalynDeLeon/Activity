@@ -3,6 +3,7 @@ import Button from "@components/button/ComponentB"
 import Foot from "@components/foot/ComponentC"
 import Head from "@components/head/ComponentD"
 import Samp from "@components/samp/ComponentE"
+import styles from '@styles/Home.module.css'
 
 
 export default function App(){
