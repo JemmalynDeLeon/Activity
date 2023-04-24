@@ -6,8 +6,6 @@ import axios from "axios";
 
 
 
-
-
 const validate = (values) => {
   const errors = {};
  
