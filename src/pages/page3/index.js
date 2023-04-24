@@ -42,12 +42,18 @@ const SignupForm = () => {
       .min(2, "Too Short!").max(70, "Too Long!").required("Required!"),
 
     email: Yup.string()
-      .email("Invalid email").required("Required!"), 
+      .email("Invalid email").required("Required!")
+      .matches(
+        /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+        "Invalid email address"
+      ), 
 
     password: Yup.string()
       .min(8, "Password must be at least 8 characters").max(15, "Too Long!") .required("Required!"),
+
     birthdate: Yup.date()
       .required("Required!"),
+
     gender: Yup.string()
       .oneOf(['male', 'female', 'prefer not to say'], 'Invalid Gender').required("Required!"),
 });
@@ -79,7 +85,7 @@ const [display, setDisplay] = useState();
         {/* // error-message */}
 
         {({ errors, touched, values }) => (
-          <Form style={{ display: "flex", flexDirection: "column",  }}>
+          <Form style={{  display: "flex", flexDirection: "column",  }}>
             <label style={styles.label} htmlFor="firstName">First Name</label>
             <Field id="firstName" name="firstName" placeholder="First Name" />
             <ErrorMessage component="div" style={{ color: 'red' }} name="firstName" />
