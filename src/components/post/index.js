@@ -36,12 +36,12 @@ const Posts = () => {
 
   const SignupSchema = Yup.object().shape({
     title: Yup.string()
-      .min(2, "Too Short!")
-      .max(70, "Too Long!")
+      .min(3, "Too Short!")
+      .max(50, "Too Long!")
       .required("Title is Required"),
     body: Yup.string()
-      .min(2, "Too Short!")
-      .max(70, "Too Long!")
+      .min(3, "Too Short!")
+      .max(50, "Too Long!")
       .required("Body is Required"),
   });
 
