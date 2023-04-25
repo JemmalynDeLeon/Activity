@@ -107,17 +107,6 @@ const Posts = () => {
 
   return (
     <div>
-      <div>
-        {/* <p>GET</p>
-        {data &&
-          data.splice(0, 5).map((value, key) => {
-            return (
-              <p>
-                {key}: {value?.title}
-              </p>
-            );
-          })} */}
-      </div>
       <br />
       <div>
         <p>POST</p>
@@ -199,7 +188,7 @@ const Posts = () => {
               <ErrorMessage name="body" />
               <br />
               <br />
-              <button type="submit">Submit</button>
+              <button type="update">update</button>
               <p>
                 Status:{" "}
                 {patchStatus === 200 ? (
