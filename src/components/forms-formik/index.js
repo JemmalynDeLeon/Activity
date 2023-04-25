@@ -361,7 +361,7 @@ const FormsFormik = () => {
             <br></br>
             <p style={styles.p}>{display}</p>
             <p>
-                Post Status:{" "}
+                Sign up Status:{" "}
                 {postStatus === 200 ? (
                   <span style={{ color: "green" }}>Success</span>
                 ) : postStatus === 500 ? (
@@ -376,7 +376,18 @@ const FormsFormik = () => {
       </Formik>
       <br></br>
       <div>
-      <h3>EDIT</h3>
+        <p>Data</p>
+        {data && data.map((value, index) => {
+            return (
+              <p key={index}>
+                 {value?.first_name}
+              </p>
+            );
+          })}
+      </div>
+      <br></br>
+      <div>
+      <h3></h3>
       <Formik
                 initialValues={{
                   id: "",
@@ -520,7 +531,7 @@ const FormsFormik = () => {
             <br></br>
             <p style={styles.p}>{display}</p>
               <p>
-                Status:{" "}
+                Edit Status:{" "}
                 {patchStatus === 200 ? (
                   <span style={{ color: "green" }}>Success</span>
                 ) : patchStatus === 500 ? (
@@ -537,7 +548,7 @@ const FormsFormik = () => {
 
       <div>
         <br/>
-        <p>DELETE</p>
+        
         <Formik
           initialValues={{
             id: "",
