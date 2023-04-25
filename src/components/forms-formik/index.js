@@ -5,12 +5,12 @@ import axios from "axios";
 
 const styles = {
     container: {
-        backgroundColor: "whitesmoke",
+        backgroundColor: "white",
         display: "flex",
         flexDirection: "column",
         width: "98%",
         height: "100%",
-        borderRadius: "5px",
+        borderRadius: "3px",
         paddingBottom: "10px",
     },
 
@@ -26,7 +26,7 @@ const styles = {
       padding: "5px",
       marginBottom: "5px",
       borderStyle: "solid",
-      borderRadius:"5px",
+      borderRadius:"10px",
       boxSizing: "border-box",
       color: "#1c1e21",
       display: "inline-block",
@@ -36,7 +36,7 @@ const styles = {
       padding: "0 28px 0 10px",
       width: "100%",
       margin: "5px",
-      backgroundColor:"lightgray"
+      backgroundColor:"white"
   },
 
     option: {
@@ -47,7 +47,7 @@ const styles = {
       margin: "5px",
       color: "black",
       borderRadius: "5px",
-      backgroundColor: "lightgray",
+      backgroundColor: "white",
     },
 
     radioButton: {
@@ -65,7 +65,7 @@ const styles = {
       margin: "5px",
       color: "black",
       borderRadius: "5px",
-      backgroundColor: "lightgray",
+      backgroundColor: "white",
     },
     p: {
         fontSize: "10px",
@@ -88,7 +88,7 @@ const styles = {
         justifyContent: "center",
         alignItems: "center",
         margin: "auto",
-        backgroundColor: "green",
+        backgroundColor: "skyblue",
         borderRadius: "5px",
     },
   }  
@@ -207,7 +207,6 @@ const FormsFormik = () => {
                 birthdate: passValue?.birthdate,
                 gender: passValue?.gender,
                 pronoun: passValue?.pronoun,
-                // body: passValue?.body, --> include one key only for PUT
               })
               .then(function (response) {
                 setPatchStatus(response?.status);
